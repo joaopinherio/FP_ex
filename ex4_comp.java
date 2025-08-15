@@ -1,7 +1,6 @@
 
 import java.util.Scanner;
 
-
 public class ex4_comp {
     public static void main(String args[]){
     
@@ -17,13 +16,13 @@ public class ex4_comp {
         /*for(int  i = ball; i > 100; box++){
             i = i - 100;
         }*/
+
         int aux = 1;
         
         box = ball/100;
         aux = ball%100;
 
-        aux = (aux+1) - aux;
-
+        aux = (aux+(aux * 1)) - aux;
 
         box += aux;
         
