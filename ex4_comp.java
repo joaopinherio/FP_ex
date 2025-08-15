@@ -17,14 +17,20 @@ public class ex4_comp {
             i = i - 100;
         }*/
 
-        int aux = 1;
+        int aux = 1, aux1 = 1;
         
         box = ball/100;
         aux = ball%100;
+        aux1 = ball%100;
+
+
 
         aux = (aux+(aux * 1)) - aux;
 
-        box += aux;
+        box += Math.min(aux, aux1);
+
+        System.out.println(+aux);
+        System.out.println(+aux1);
         
         System.out.println("N de caixas necessarias: " +box);
         
