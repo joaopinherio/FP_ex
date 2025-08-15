@@ -1,10 +1,12 @@
 import java.util.Scanner;
+import java.lang.Math;
 
 
 public class ex5_comp 
 {
     public static void main(String args[]){
     
+<<<<<<< HEAD
         double Tcost = 0, Nseats = 0;
         double pro = 0, MinOcup = 0;
         
@@ -17,6 +19,16 @@ public class ex5_comp
         Scanner in = new Scanner (System.in);
 
 
+=======
+        int Tcost = 0, Nseats = 0;
+        int pro =  0, MinOcup = 0;
+        int show = 0;
+        
+        
+        Scanner in = new Scanner (System.in);
+        
+        
+>>>>>>> f17a3d551093adbadbd698b193009e5e28026b18
         System.out.println("Custo total do show: ");
         Tcost = in.nextInt();
         
@@ -24,8 +36,9 @@ public class ex5_comp
         Nseats = in.nextInt();
 
         System.out.println("Percentual de lucro desejado: ");
-        pro = in.nextDouble();
+        pro = in.nextInt();
         
+<<<<<<< HEAD
         System.out.println("Quantidade de espetaculos que serao realizados: ");
         show = in.nextInt();
 
@@ -57,5 +70,12 @@ public class ex5_comp
         
         System.out.printf("Valor do ingresso: %.2f%n", ticket);
         
+=======
+        System.out.println("Percentual minimo de ocupacao esperado: ");
+        MinOcup = in.nextInt();
+        
+        System.out.println("Quantidade de espetaculos que serao realizados: ");
+        show = in.nextInt();
+>>>>>>> f17a3d551093adbadbd698b193009e5e28026b18
     }
 }
