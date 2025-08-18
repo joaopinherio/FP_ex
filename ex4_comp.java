@@ -23,8 +23,6 @@ public class ex4_comp {
         aux = ball%100;
         aux1 = ball%100;
 
-
-
         aux = (aux+(aux * 1)) - aux;
 
         box += Math.min(aux, aux1);
