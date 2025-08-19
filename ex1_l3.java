@@ -4,7 +4,7 @@ public class ex1_l3 {
 
     public static void main(String args[]) {
         
-        double n1 = 10, n2 = 5;
+        double n1 = 20, n2 = 10;
 
         double answer = 0;
 

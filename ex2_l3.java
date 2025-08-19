@@ -4,7 +4,7 @@ public class ex2_l3 {
 
     public static void main(String args[]) {
         
-        int mon = 9100;
+        int mon = 1100;
 
         Scanner in = new Scanner (System.in);
         
@@ -17,8 +17,6 @@ public class ex2_l3 {
         int thou = mon - cent - dec - uni;
 
         String thou_s = "";
-
-        System.out.println(thou);
 
 
         switch (thou/1000){
@@ -90,13 +88,50 @@ public class ex2_l3 {
         }
 
         String dec_s = "";
-        
+        String uni_s = "";
+
+        if(dec/10 == 1){
+            dec += uni;
+            switch (dec){
+                case 0:
+                    dec_s = "";
+                    break;
+                case 11:
+                    dec_s = "onze";
+                    break;
+                case 12:
+                    dec_s = "doze";
+                    break;
+                case 13:
+                    dec_s = "treze";
+                    break;
+                case 14:
+                    dec_s = "quatorze";
+                    break;
+                case 15:
+                    dec_s = "quinze";
+                    break;
+                case 16:
+                    dec_s = "dezesseis";
+                    break;
+                case 17:
+                    dec_s = "dezessete";
+                    break;
+                case 18:
+                    dec_s = "dezoito";
+                    break;
+                case 19:
+                    dec_s = "dezenove";
+                    break;
+        }
+        }
+
         switch (dec/10){
             case 0:
-                dec_s = "";
+                //dec_s = "";
                 break;
             case 1:
-                dec_s = "dez";
+                //dec_s = "dez";
                 break;
             case 2:
                 dec_s = "vinte";
@@ -124,7 +159,6 @@ public class ex2_l3 {
                 break;
         }
 
-        String uni_s = "";
         
         switch (uni){
             case 0:
@@ -159,12 +193,38 @@ public class ex2_l3 {
                 break;
         }
 
-        
-        if()
+        //System.out.println (+thou + " "  +cent);
 
+        thou /= 1000;
+        cent /= 100;
 
-        System.out.println(thou_s + " " + cent_s + " " + dec_s + " " + uni_s);
+        //System.out.println (+thou + " " +cent);
 
+        //print 4 casas dec
+        if(thou > 0 && cent > 0 && dec >= 10 && dec < 19){
+            System.out.println(thou_s + " " + cent_s + " e " + dec_s);
+        }
+        else if(thou > 0 && cent > 0 && dec > 0 && uni > 0){
+            System.out.println(thou_s + " " + cent_s + " " + dec_s + " e " + uni_s);
+        }
+        //print 3 casas dec
+        if(thou == 0 && cent > 0 && dec >= 10 && dec < 19){
+            System.out.println(cent_s + " e " + dec_s);
+        }
+        else if(thou == 0 && cent > 0 && dec > 0 && uni > 0){
+            System.out.println(cent_s + " " + dec_s + " e " + uni_s);
+        }
+        //print 2 casas dec
+        if(thou == 0 && cent == 0 && dec >= 10 && dec < 19){
+            System.out.println(dec_s);
+        }
+        else if(thou == 0 && cent == 0 && dec > 0 && uni > 0){
+            System.out.println(dec_s + " e " + uni_s);
+        }
+        //print 1 casa dec
+        if(thou == 0 && cent == 0 && dec == 0 && uni > 0){
+            System.out.println(uni_s);
+        }
         
     }
 }
