@@ -4,12 +4,24 @@ public class ex2_l3 {
 
     public static void main(String args[]) {
         
-        int mon = 1002;
+        //int mon = 5019;
 
         Scanner in = new Scanner (System.in);
-        
-        //System.out.println("teste: ");
-        //a = in.nextInt();
+
+        System.out.println("Preencha um valor em dinheiro no intervalo entre (1;9999): ");
+        int mon = in.nextInt();   
+
+        while(!(mon > 0 && mon <= 9999))
+        {
+            System.out.println("Um valor certo animal");
+            mon = in.nextInt();  
+        }
+
+        /*while(mon < 0 && mon > 9999)
+        {
+            System.out.println("Um valor certo animal");
+            mon = in.nextInt();  
+        }*/
 
         int uni = ((mon%100)%10);
         int dec = (mon%100) - uni;
@@ -194,16 +206,12 @@ public class ex2_l3 {
             }
         }
             
-            //System.out.println (+thou + " "  +cent);
+        //System.out.println (+thou + " "  +cent);
             
         thou /= 1000;
         cent /= 100;
 
-        //System.out.println (+thou + " " +cent);
-
-        //new test
-        System.out.println(+uni);
-
+        //System.out.println (+thou + " " +cent + " " +dec + " " +uni );
         
         //print 4 alg
         if(thou > 0 && cent > 0 && dec > 0 && uni > 0){//1111
@@ -219,25 +227,49 @@ public class ex2_l3 {
             thou_s += " ";
             cent_s += " e ";
         }
-        else if(thou > 0 && cent > 0 && dec == 0 && uni == 0 || uni > 0){ //1100 ou 1001
+        else if(thou > 0 && cent == 1 && dec == 0 && uni == 0){//mil e "cem" 1100
+            thou_s += " e ";
+            cent_s = "cem";
+        }
+        else if(thou > 0 && cent > 0 && dec == 0 && uni == 0){ //1200
+            thou_s += " e ";
+        }
+        else if(thou > 0 && cent == 0 && dec >= 10 && dec <= 19  && uni == 0){ //1011 caso 10 a 19
+            thou_s += " e ";
+        }
+        else if(thou > 0 && cent == 0 && dec > 0  && uni > 0){ //1011
+            thou_s += " e ";
+            dec_s += " e ";
+        }
+        else if(thou > 0 && cent == 0 && dec == 0 && uni > 0){ //1011
             thou_s += " e ";
         }
 
         //print 3 alg
-        if(thou == 0 && cent > 0 && dec > 0 && uni > 0){
+        if(thou == 0 && cent > 0 && dec > 0 && uni > 0){//111
             cent_s += " e ";
             dec_s += " e ";
         }
-        if(thou == 0 && cent > 0 && dec > 0 && uni == 0){
+        else if(thou == 0 && cent > 0 && dec > 0 && uni >= 0){//110
             cent_s += " e ";
         }
-        else if(thou == 0 && cent == 1 && dec == 0 && uni == 0){
+        else if(thou == 0 && cent > 0 && dec == 0 && uni > 0){//101
+            cent_s += " e ";
+        }
+        else if(thou == 0 && cent == 1 && dec == 0 && uni == 0){//"cem"
             cent_s = "cem";
         }
 
         //print 2 alg
         if(thou == 0 && cent == 0 && dec > 0 && uni > 0){
             dec_s += " e ";
+        }
+
+        //print 1 alg
+        if(thou == 0 && cent == 0 && dec == 0 && uni > 0){
+            thou_s = "";
+            cent_s = "";            
+            dec_s = "";
         }
 
         System.out.println(thou_s + cent_s + dec_s + uni_s);
