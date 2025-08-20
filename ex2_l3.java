@@ -4,7 +4,7 @@ public class ex2_l3 {
 
     public static void main(String args[]) {
         
-        int mon = 1100;
+        int mon = 1002;
 
         Scanner in = new Scanner (System.in);
         
@@ -68,7 +68,7 @@ public class ex2_l3 {
                 cent_s = "trezentos";
                 break;
             case 4:
-                cent_s = "quatrozentos";
+                cent_s = "quatrocentos";
                 break;
             case 5:
                 cent_s = "quinhentos";
@@ -93,8 +93,8 @@ public class ex2_l3 {
         if(dec/10 == 1){
             dec += uni;
             switch (dec){
-                case 0:
-                    dec_s = "";
+                case 10:
+                    dec_s = "dez";
                     break;
                 case 11:
                     dec_s = "onze";
@@ -124,107 +124,123 @@ public class ex2_l3 {
                     dec_s = "dezenove";
                     break;
         }
+            uni = 0;
         }
-
-        switch (dec/10){
-            case 0:
-                //dec_s = "";
+        else{
+            switch (dec/10){
+                case 0:
+                dec_s = "";
                 break;
-            case 1:
+                case 1:
                 //dec_s = "dez";
                 break;
-            case 2:
+                case 2:
                 dec_s = "vinte";
                 break;
-            case 3:
+                case 3:
                 dec_s = "trinta";
                 break;
-            case 4:
+                case 4:
                 dec_s = "quarenta";
                 break;
-            case 5:
+                case 5:
                 dec_s = "cinquenta";
                 break;
-            case 6:
+                case 6:
                 dec_s = "sessenta";
                 break;
-            case 7:
+                case 7:
                 dec_s = "setenta";
                 break;
-            case 8:
+                case 8:
                 dec_s = "oitenta";
                 break;
-            case 9:
+                case 9:
                 dec_s = "noventa";
                 break;
-        }
-
-        
-        switch (uni){
-            case 0:
+            }
+            
+            switch (uni){
+                case 0:
                 uni_s = "";
                 break;
-            case 1:
+                case 1:
                 uni_s = "um";
                 break;
-            case 2:
+                case 2:
                 uni_s = "dois";
                 break;
-            case 3:
+                case 3:
                 uni_s = "tres";
                 break;
-            case 4:
+                case 4:
                 uni_s = "quatro";
                 break;
-            case 5:
+                case 5:
                 uni_s = "cinco";
                 break;
-            case 6:
+                case 6:
                 uni_s = "seis";
                 break;
-            case 7:
+                case 7:
                 uni_s = "sete";
                 break;
-            case 8:
+                case 8:
                 uni_s = "oito";
                 break;
-            case 9:
+                case 9:
                 uni_s = "nove";
                 break;
+            }
         }
-
-        //System.out.println (+thou + " "  +cent);
-
+            
+            //System.out.println (+thou + " "  +cent);
+            
         thou /= 1000;
         cent /= 100;
 
         //System.out.println (+thou + " " +cent);
 
-        //print 4 casas dec
-        if(thou > 0 && cent > 0 && dec >= 10 && dec < 19){
-            System.out.println(thou_s + " " + cent_s + " e " + dec_s);
+        //new test
+        System.out.println(+uni);
+
+        
+        //print 4 alg
+        if(thou > 0 && cent > 0 && dec > 0 && uni > 0){//1111
+            thou_s += " ";
+            cent_s += " e ";
+            dec_s += " e ";
         }
-        else if(thou > 0 && cent > 0 && dec > 0 && uni > 0){
-            System.out.println(thou_s + " " + cent_s + " " + dec_s + " e " + uni_s);
+        else if(thou > 0 && cent > 0 && dec > 0 && uni == 0){//1110
+            thou_s += " ";
+            cent_s += " e ";
         }
-        //print 3 casas dec
-        if(thou == 0 && cent > 0 && dec >= 10 && dec < 19){
-            System.out.println(cent_s + " e " + dec_s);
+        else if(thou > 0 && cent > 0 && dec == 0 && uni > 0){//1101
+            thou_s += " ";
+            cent_s += " e ";
         }
-        else if(thou == 0 && cent > 0 && dec > 0 && uni > 0){
-            System.out.println(cent_s + " " + dec_s + " e " + uni_s);
+        else if(thou > 0 && cent > 0 && dec == 0 && uni == 0 || uni > 0){ //1100 ou 1001
+            thou_s += " e ";
         }
-        //print 2 casas dec
-        if(thou == 0 && cent == 0 && dec >= 10 && dec < 19){
-            System.out.println(dec_s);
+
+        //print 3 alg
+        if(thou == 0 && cent > 0 && dec > 0 && uni > 0){
+            cent_s += " e ";
+            dec_s += " e ";
         }
-        else if(thou == 0 && cent == 0 && dec > 0 && uni > 0){
-            System.out.println(dec_s + " e " + uni_s);
+        if(thou == 0 && cent > 0 && dec > 0 && uni == 0){
+            cent_s += " e ";
         }
-        //print 1 casa dec
-        if(thou == 0 && cent == 0 && dec == 0 && uni > 0){
-            System.out.println(uni_s);
+        else if(thou == 0 && cent == 1 && dec == 0 && uni == 0){
+            cent_s = "cem";
         }
+
+        //print 2 alg
+        if(thou == 0 && cent == 0 && dec > 0 && uni > 0){
+            dec_s += " e ";
+        }
+
+        System.out.println(thou_s + cent_s + dec_s + uni_s);
         
     }
 }
