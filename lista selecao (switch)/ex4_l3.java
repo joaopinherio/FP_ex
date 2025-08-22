@@ -4,14 +4,13 @@ public class ex4_l3 {
 
     public static void main(String args[]) {
         
-        double saldo;
+        double limit = 0;
 
         Scanner in = new Scanner (System.in);
         
         System.out.println("Informe o saldo medio da sua conta corrente: ");
-        saldo = in.nextDouble();
+        double saldo = in.nextDouble();
         
-        double limit = 0;
 
         if(saldo < 500){
             limit = saldo;
@@ -23,7 +22,9 @@ public class ex4_l3 {
             limit = saldo * 0.15;
         }
 
-        int op = 1;
+        System.out.println("Selecione uma operacao\n1: Saque\n2: Deposito\n3: Limite da conta");
+        int op = in.nextInt();
+
         double saq = 0, depo = 0;
         
         switch (op){
@@ -43,21 +44,20 @@ public class ex4_l3 {
                 depo = in.nextDouble();
 
                 if(depo <= 0){
-                    System.out.println("Valor de deposito invalido: ");                    
+                    System.out.println("Valor de deposito invalido");                    
                 }
                 else{ 
                     System.out.println("Deposito efetuado! \nSaldo atual: " +(saldo + depo));
-                    break;
                 }
+                break;
             case 3:
-
                 if(limit == saldo){
                     System.out.println("Sua conta nao possui limite");
                 }
                 else{
                     System.out.println("Seu limite eh: " + String.format("%.2f", limit));   
-                    break;     
                 }
+                break;   
             }
 
         

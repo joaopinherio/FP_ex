@@ -13,7 +13,7 @@ public class ex2_l3 {
 
         while(!(mon > 0 && mon <= 9999))
         {
-            System.out.println("Um valor certo animal");
+            System.out.println("Digite um valor compativel (1;9999):");
             mon = in.nextInt();  
         }
 
