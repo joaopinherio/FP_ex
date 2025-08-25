@@ -6,8 +6,8 @@ import java.lang.Math;
 public class ex2_comp
 {
     public static double jnotas(double a, int b){
-        b = (int)a;
         Scanner in = new Scanner (System.in);
+        b = (int)a;
         System.out.println("Nota do juiz " +b);
         a = in.nextDouble();
         
@@ -58,6 +58,5 @@ public class ex2_comp
         System.out.println("Nota da banca b: " + med_n);
 
     }
-
 
 }
