@@ -22,6 +22,12 @@ public class ex9_comp_l2 {
         double menor = lesser(num1, num2, num3, num4, num5);
         double maior = greater(num1, num2, num3, num4, num5);
 
+        double result = num1 + num2 + num3 + num4 + num5;
+        result -= maior - menor;
+
+        System.out.println("Media entre os numeros entre o maior e menor" + med(result));
+
+
     }
 
     public static double extract_val(double a){
@@ -44,6 +50,16 @@ public class ex9_comp_l2 {
 
         return L;
     }
+
+    public static doulbe snd_lesser(double n1, double n2, double n3, double n4, double n5){
+        
+        
+    
+    }
+
+
+
+
     public static double greater (double n1, double n2, double n3, double n4, double n5){
         double G = n1;
         
@@ -54,6 +70,12 @@ public class ex9_comp_l2 {
 
         return G;
     }
+
+    public static double med (double a){
+        return a/3;
+    }
+
+
 
 
 
