@@ -87,6 +87,21 @@ public class metodos {
         return a_b + (a_l * 4);
     }
 
+    public static int get_num(){
+        
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("Preencha um valor intervalo entre (1;9999): ");
+        int num = in.nextInt();
+
+        while (!(num > 0 && num <= 9999)) {
+            System.out.println("Digite um valor compativel (1;9999):");
+            num = in.nextInt();
+        }
+
+        return num;
+    }
+
 
 
 
