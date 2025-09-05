@@ -20,7 +20,7 @@ public class ex7_comp_l2 {
         int cent = ((number % 1000) - dec - uni) / 100;
         int thou = (number - cent - dec - uni) / 1000;
 
-        System.out.println(+thou + " " + cent + " " + dec + " " + uni);
+        //System.out.println(+thou + " " + cent + " " + dec + " " + uni);
 
         String test = thou + "" + cent + "" + dec + "" + uni;
         String test_inv = uni + "" + dec + "" + cent + "" + thou;
