@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 //inspo ex1 switch
-public class ex3 {
+public class ex3_meth {
 
     public static void main(String args[]) {
         

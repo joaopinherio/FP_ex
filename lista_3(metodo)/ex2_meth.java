@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 //original ex7 da comp de selecao
 
-public class ex2 {
+public class ex2_meth {
 
     public static void main(String args[]) {
 

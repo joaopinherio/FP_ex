@@ -8,7 +8,7 @@ Abaixo de 3 – E*/
 
 import java.util.Scanner;
 
-public class ex1 {
+public class ex1_meth {
 
     public static void main(String args[]) {
 

@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 
-public class ex3_compFR
+public class ex3_compFR_a
 {
         public static void main(String args[]){
     

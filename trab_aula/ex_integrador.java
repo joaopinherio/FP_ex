@@ -1,10 +1,9 @@
-package trab_aula;
-import java.time.temporal.ChronoUnit;
+/*import java.time.temporal.ChronoUnit;
 
 import java.time.MonthDay;
 import java.util.Scanner;
 
-public class ex_integrador {
+public class ex_integrador{
     public static void main(String args[]) {
         
         //LocalDate cdate = LocalDate.now();
@@ -20,10 +19,6 @@ public class ex_integrador {
 
         String date_b = "" + date_birth(dia, mes, ano);
         String date_tod = "" + MonthDay.now();
-
-        Local
-
-        int dias_dif = 
 
         System.out.println(date_b);
 
@@ -47,7 +42,7 @@ public class ex_integrador {
         return MonthDay.of(mes,dia);
     }
 
-    public static int diff_d(){
+    //public static int diff_d(){
         
     }
 
@@ -69,5 +64,4 @@ public class ex_integrador {
         } else {
             System.out.println("Hoje nao eh seu aniversario");
         }
-    }
-}
+    }*/
