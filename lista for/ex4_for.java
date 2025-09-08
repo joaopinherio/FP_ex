@@ -16,12 +16,13 @@ public class ex4_for {
 
         int par_count = 0;
         double par_s = 0;
+        
         int impar_count = 0;
         double impar_s = 0;
-        double soma = 0;
+
         for(double i = 0, aux = 0; i < quant; i++){
             
-            System.out.println("Digte o numero" + i + ": ");
+            System.out.print("Digte o numero" + i + ": ");
             aux = in.nextDouble();
 
             if(aux % 2 == 0){
@@ -33,10 +34,11 @@ public class ex4_for {
             }
         }
 
-        System.out.println(par_count);
-        System.out.println(par_s);
+        System.out.println("Quantidade de numeros pares: " + par_count);
+        System.out.println("Quantidade de numeros impares: " + impar_count);
 
-        System.out.println(impar_count);
+        System.out.println("Media dos numero pares digitados: " + (par_s/par_count));
+        System.out.println("Media geral dos numeros lidos: "+(par_s + impar_s)/quant);
         
     }
 }
