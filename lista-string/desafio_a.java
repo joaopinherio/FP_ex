@@ -11,7 +11,7 @@ public class desafio_a{
         String fst_name = nome1, snd_name = nome1, trd_name = nome1;
              
         if(fst_name.compareTo(nome2) > 0) fst_name =  nome2;
-        if(fst_name.compareTo(nome3) > 0) fst_name = nome3;
+        if(fst_name.compareTo(nome3) > 0) fst_name = nome3; 
 
         if(trd_name.compareTo(nome2) < 0) trd_name = nome2;
         if(trd_name.compareTo(nome3) < 0) trd_name = nome3;
