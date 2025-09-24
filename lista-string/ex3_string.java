@@ -8,24 +8,21 @@ public class ex3_string{
     public static void main(String args[]) {
 
         while(true){
-            int vog = 0;
             String word = get_string();
             if(word.equalsIgnoreCase("sair")) break;
-
+            
+            int vog_count = 0;
             String vog_aux = "AEIOUaeiou";
             for(int i = 0; i < word.length(); i++){
-                //String aux = "" + word.charAt(i);
-
-                //System.out.println(word);
-                if(word.indexOf("AEIOUaeiou",i) != -1){
-                    vog++;
+                char aux = word.charAt(i);
+                if(vog_aux.indexOf(aux) != -1){
+                    vog_count++;
                 }
-                System.out.println("A palavra digitada tem: " +vog + " vogais");
             }
+            System.out.println("A palavra digitada tem: " +vog_count + " vogais");
 
         }
         
-
     }
 
     public static String get_string(){
